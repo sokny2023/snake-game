@@ -1,7 +1,7 @@
 // Game settings
 const boardSize = 300;  // Width and height of the game board
 const gridSize = 20;    // Size of one grid cell (snake and food size)
-let gameSpeed = 500;    // Default game speed (milliseconds per tick)
+let gameSpeed = 450;    // Default game speed (milliseconds per tick)
 
 const gameBoard = document.getElementById('game-board');
 const scoreDisplay = document.getElementById('score');
@@ -92,7 +92,7 @@ function moveSnake() {
     snake.unshift(head);  // Add new head to the front of the snake
 
     if (head.x === food.x && head.y === food.y) {
-        score += 10;
+        score += 1;
         updateScore(score);
         generateFood();
     } else {
@@ -197,7 +197,7 @@ difficultySelect.addEventListener('change', function() {
     // Adjust game speed based on selected difficulty
     switch (selectedDifficulty) {
         case 'easy':
-            gameSpeed = 500;
+            gameSpeed = 450;
             break;
         case 'medium':
             gameSpeed = 350;

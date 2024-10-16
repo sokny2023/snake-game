@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>
-        <span>CSTAD</span>
+        <!-- <span>CSTAD</span> -->
         <span>Snake Game</span>
     </h1>
 
@@ -18,17 +18,6 @@
     <!-- Score display -->
     <div id="score">Score: 0</div>
 
-    <!-- Difficulty level selector -->
-    <div id="difficulty-controls" class="level" >
-        <label for="difficulty">Choose difficulty:</label>
-        <select id="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-            <option value="very-hard">Very Hard</option>
-        </select>
-    </div>
-
     <!-- Control buttons (shown on mobile/tablet only) -->
     <div id="mobile-controls">
         <button id="up-btn" class="btn">Up</button>
@@ -37,6 +26,17 @@
             <button id="right-btn" class="btn">Right</button>
         </div>
         <button id="down-btn" class="btn">Down</button>
+    </div>
+
+    <!-- Difficulty level selector -->
+    <div id="difficulty-controls" class="level" >
+        <label for="difficulty">Choose level:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            <option value="very-hard">Very Hard</option>
+        </select>
     </div>
 
     <!-- Start, Pause/Resume, and Stop buttons -->
