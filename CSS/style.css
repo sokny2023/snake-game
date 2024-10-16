@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#game-board {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #333;
+    border: 2px solid #000;
+    margin-bottom: 10px;
+}
+
+.snake {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: limegreen;
+}
+
+.snake-head {
+    background-color: yellow; /* A cute yellow head for the snake */
+    border-radius: 50%;       /* Make the head round */
+}
+
+.food {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+#score {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
