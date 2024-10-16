@@ -1,5 +1,5 @@
 // Game settings
-const boardSize = 400;  // Width and height of the game board
+const boardSize = 300;  // Width and height of the game board
 const gridSize = 20;    // Size of one grid cell (snake and food size)
 const gameSpeed = 200;  // Game speed (milliseconds per tick)
 
