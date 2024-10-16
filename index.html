@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack Game</title>
+    <title>Snake Game</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <h1> 
+    <h1>
         <span>CSTAD</span>
         <span>Snake Game</span>
     </h1>
-    
+
     <!-- Game board -->
     <div id="game-board"></div>
-    
+
     <!-- Score display -->
     <div id="score">Score: 0</div>
-    
+
+    <!-- Difficulty level selector -->
+    <div id="difficulty-controls" class="level" >
+        <label for="difficulty">Choose difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            <option value="very-hard">Very Hard</option>
+        </select>
+    </div>
+
     <!-- Control buttons (shown on mobile/tablet only) -->
     <div id="mobile-controls">
         <button id="up-btn" class="btn">Up</button>
@@ -27,15 +38,14 @@
         </div>
         <button id="down-btn" class="btn">Down</button>
     </div>
-    
+
     <!-- Start, Pause/Resume, and Stop buttons -->
     <div id="controls" class="controll">
         <button id="start-btn" class="btn btn1 btn-start">Start</button>
         <button id="pause-resume-btn" class="btn btn1 btn-resume">Pause</button>
         <button id="stop-btn" class="btn btn1 btn-stop">Stop</button>
     </div>
-    
+
     <script src="./JavaScript/script.js"></script>
 </body>
 </html>
-

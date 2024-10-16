@@ -1,13 +1,16 @@
 // Game settings
 const boardSize = 300;  // Width and height of the game board
 const gridSize = 20;    // Size of one grid cell (snake and food size)
-const gameSpeed = 200;  // Game speed (milliseconds per tick)
+let gameSpeed = 500;    // Default game speed (milliseconds per tick)
 
 const gameBoard = document.getElementById('game-board');
 const scoreDisplay = document.getElementById('score');
 const startBtn = document.getElementById('start-btn');
 const pauseResumeBtn = document.getElementById('pause-resume-btn');
 const stopBtn = document.getElementById('stop-btn');
+
+// Difficulty controls
+const difficultySelect = document.getElementById('difficulty');
 
 // Mobile control buttons
 const upBtn = document.getElementById('up-btn');
@@ -186,6 +189,33 @@ function resetGame() {
     drawSnake();
     drawFood();
 }
+
+// Function to handle difficulty change
+difficultySelect.addEventListener('change', function() {
+    const selectedDifficulty = difficultySelect.value;
+
+    // Adjust game speed based on selected difficulty
+    switch (selectedDifficulty) {
+        case 'easy':
+            gameSpeed = 500;
+            break;
+        case 'medium':
+            gameSpeed = 350;
+            break;
+        case 'hard':
+            gameSpeed = 220;
+            break;
+        case 'very-hard':
+            gameSpeed = 170;
+            break;
+    }
+
+    // If the game is already running, restart it with the new speed
+    if (isGameRunning && !isPaused) {
+        clearInterval(gameInterval);
+        gameInterval = setInterval(update, gameSpeed);
+    }
+});
 
 // Event listeners for start, pause/resume, and stop buttons
 startBtn.addEventListener('click', startGame);
