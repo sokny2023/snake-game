@@ -1,11 +1,8 @@
-# Use a lightweight nginx base image
+# Use the official Nginx image as a base image
 FROM nginx:alpine
 
-# Copy your static HTML files to the nginx directory
-COPY ./html /usr/share/nginx/html
+# Copy your HTML files to the Nginx default directory
+COPY . /usr/share/nginx/html
 
-# Expose port 80
+# Expose port 80 to make the server accessible
 EXPOSE 80
-
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
