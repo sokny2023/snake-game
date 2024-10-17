@@ -195,17 +195,41 @@ function createFood(type, score, color) {
     };
 }
 
-// Draw food on the board
+
+// Function to draw food on the board
 function drawFood() {
     foods.forEach(food => {
         const foodElement = document.createElement('div');
         foodElement.style.left = `${food.x}px`;
         foodElement.style.top = `${food.y}px`;
-        foodElement.style.backgroundColor = food.color;
+
+        // Set different styles for each food type including border-radius
+        switch (food.type) {
+            case 'small':
+                foodElement.style.width = '15px';
+                foodElement.style.height = '15px';
+                foodElement.style.backgroundColor = 'white';
+                foodElement.style.borderRadius = '50%';  // Circular shape
+                break;
+            case 'medium':
+                foodElement.style.width = '20px';
+                foodElement.style.height = '20px';
+                foodElement.style.backgroundColor = 'red';
+                foodElement.style.borderRadius = '50%';  // Circular shape
+                break;
+            case 'large':
+                foodElement.style.width = '25px';
+                foodElement.style.height = '25px';
+                foodElement.style.backgroundColor = 'blue';
+                foodElement.style.borderRadius = '50%';  // Circular shape
+                break;
+        }
         foodElement.classList.add('food');
         gameBoard.appendChild(foodElement);
     });
 }
+
+
 
 // Update the score display
 function updateScore(newScore) {

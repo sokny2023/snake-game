@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: snake-game:v1.1
+    image: snake-game:v1.2
     build:
       context: .
       dockerfile: Dockerfile
